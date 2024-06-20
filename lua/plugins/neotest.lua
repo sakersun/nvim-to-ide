@@ -17,6 +17,7 @@ return {
 					python = ".venv/bin/python",
 					pytest_discover_instances = true,
 				}),
+				require("rustaceanvim.neotest"),
 			},
 		})
 	end,
