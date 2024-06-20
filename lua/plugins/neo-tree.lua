@@ -13,7 +13,9 @@ return {
 		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 		vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
-		require("neo-tree").setup({
+		local neotree = require("neo-tree")
+
+		neotree.setup({
 			close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
 			popup_border_style = "rounded",
 			enable_git_status = true,
@@ -292,6 +294,6 @@ return {
 			},
 		})
 
-		vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+		vim.cmd([[nnoremap <A-n> :Neotree reveal<cr>]])
 	end,
 }
