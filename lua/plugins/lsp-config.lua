@@ -92,6 +92,15 @@ return {
 			local capabilities =
 				require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+			local function ts_organize_imports()
+				local params = {
+					command = "_typescript.organizeImports",
+					arguments = { vim.api.nvim_buf_get_name(0) },
+					title = "",
+				}
+				vim.lsp.buf.execute_command(params)
+			end
+
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
 			})
@@ -103,6 +112,12 @@ return {
 			})
 			lspconfig.tsserver.setup({
 				capabilities = capabilities,
+				commands = {
+					OrganizeImports = {
+						ts_organize_imports,
+						description = "Organize Imports",
+					},
+				},
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Documentation" })
