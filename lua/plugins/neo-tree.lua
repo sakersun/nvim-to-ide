@@ -294,6 +294,6 @@ return {
 			},
 		})
 
-		vim.cmd([[nnoremap <A-n> :Neotree reveal<cr>]])
+		vim.keymap.set("n", "<A-n>", "<cmd>Neotree<CR>", { desc = "Open Neotree" })
 	end,
 }
