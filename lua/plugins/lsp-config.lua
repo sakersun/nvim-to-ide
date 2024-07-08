@@ -17,9 +17,6 @@ return {
 			},
 			capabilities = capabilities,
 		})
-		lspconfig.vim_ls.setup({
-			capabilities = capabilities,
-		})
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
 		})
