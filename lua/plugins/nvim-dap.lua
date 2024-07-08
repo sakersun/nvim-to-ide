@@ -11,7 +11,7 @@ return {
 					name = "Launch file",
 					program = "${file}",
 					pythonPath = function()
-						return "/home/saker/workspace/pine/.venv/bin/python"
+						return "python"
 					end,
 				},
 			}
@@ -40,13 +40,13 @@ return {
 	{
 		"mfussenegger/nvim-dap-python",
 		config = function()
-			require("dap-python").setup("/home/saker/workspace/pine/.venv/bin/python")
+			require("dap-python").setup("python")
 		end,
 	},
 	{
 		"theHamsta/nvim-dap-virtual-text",
 		config = function()
-			require("nvim-dap-virtual-text").setup()
+			require("nvim-dap-virtual-text").setup({})
 		end,
 	},
 }
