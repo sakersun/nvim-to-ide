@@ -17,4 +17,4 @@ vim.keymap.set(
 )
 
 -- toggle outline
-vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { noremap = true, silent = true, desc = "Toggle Outline" })
+vim.keymap.set("n", "<leader>to", "<cmd>Outline<CR>", { noremap = true, silent = true, desc = "Toggle Outline" })
