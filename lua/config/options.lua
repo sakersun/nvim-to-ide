@@ -12,6 +12,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	pattern = "*.py",
