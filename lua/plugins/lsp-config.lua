@@ -20,7 +20,7 @@ return {
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
 		})
-		lspconfig.pyright.setup({
+		lspconfig.ruff_lsp.setup({
 			capabilities = capabilities,
 		})
 	end,
