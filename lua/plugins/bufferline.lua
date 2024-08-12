@@ -5,6 +5,7 @@ return {
 	config = function()
 		require("bufferline").setup({
 			options = {
+				separator_style = "slant",
 				offsets = {
 					{
 						filetype = "neo-tree",
