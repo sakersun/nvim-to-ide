@@ -10,11 +10,4 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
 
-vim.cmd([[
-  augroup OpenNeotreeOnStart
-    autocmd!
-    autocmd VimEnter * Neotree
-  augroup END
-]])
-
 vim.cmd([[colorscheme catppuccin-mocha]])
