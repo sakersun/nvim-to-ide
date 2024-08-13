@@ -10,5 +10,8 @@ return {
 		lspconfig.tsserver.setup({
 			capabilities = capabilities,
 		})
+		lspconfig.pyright.setup({
+			capabilities = capabilities,
+		})
 	end,
 }
