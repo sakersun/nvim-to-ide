@@ -27,6 +27,7 @@ return {
 						diagnosticMode = "openFilesOnly",
 						autoImportCompletions = true,
 						exclude = { "**/__cache__/*", "**/__pycache__/*", "tests", "build", "docs", ".venv", ".git" },
+						logLevel = "info",
 					},
 				},
 			},
