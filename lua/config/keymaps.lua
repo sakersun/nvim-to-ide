@@ -4,10 +4,11 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 -- for bufferline
-vim.api.nvim_set_keymap("n", "<leader>bn", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>bp", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>bc", ":bdelete<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>bl", ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>br", ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>1", ":BufferLineGoToBuffer 1<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>2", ":BufferLineGoToBuffer 2<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bn", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bl", ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>br", ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
+for i = 1, 9 do
+	vim.keymap.set("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", { noremap = true, silent = true })
+end
