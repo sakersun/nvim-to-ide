@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>bn", ":BufferLineCycleNext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bp", ":BufferLineCyclePrev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bc", ":bdelete<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bl", ":BufferLineMovePrev<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>br", ":BufferLineMoveNext<CR>", { noremap = true, silent = true })
 for i = 1, 9 do
