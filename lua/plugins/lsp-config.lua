@@ -18,6 +18,11 @@ return {
 			capabilities = capabilities,
 		})
 		lspconfig.tsserver.setup({
+			init_options = {
+				preferences = {
+					importModuleSpecifierPreference = "non-relative",
+				},
+			},
 			capabilities = capabilities,
 		})
 		lspconfig.pyright.setup({
