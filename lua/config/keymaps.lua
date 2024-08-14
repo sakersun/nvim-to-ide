@@ -13,3 +13,6 @@ vim.keymap.set("n", "<leader>br", ":BufferLineMoveNext<CR>", { noremap = true, s
 for i = 1, 9 do
 	vim.keymap.set("n", "<leader>" .. i, ":BufferLineGoToBuffer " .. i .. "<CR>", { noremap = true, silent = true })
 end
+
+-- for neotree
+vim.keymap.set("n", "<leader>nn", ":Neotree<CR>", { noremap = true, silent = true })
