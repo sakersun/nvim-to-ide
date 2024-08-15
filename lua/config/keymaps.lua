@@ -16,3 +16,6 @@ end
 
 -- for neotree
 vim.keymap.set("n", "<leader>nn", ":Neotree<CR>", { noremap = true, silent = true })
+
+-- for outline
+vim.keymap.set("n", "<leader>o", ":Outline<CR>", { noremap = true, silent = true })
