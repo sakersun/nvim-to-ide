@@ -12,7 +12,7 @@ return {
 			adapters = {
 				require("neotest-python")({
 					runner = "pytest",
-					python = ".venv/bin/python",
+					-- python = ".venv/bin/python",
 					args = { "--log-level", "DEBUG" },
 				}),
 			},
