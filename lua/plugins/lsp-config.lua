@@ -42,5 +42,8 @@ return {
 			end,
 			capabilities = capabilities,
 		})
+		lspconfig.bashls.setup({
+			capabilities = capabilities,
+		})
 	end,
 }
