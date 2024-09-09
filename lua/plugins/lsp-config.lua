@@ -17,7 +17,7 @@ return {
 			},
 			capabilities = capabilities,
 		})
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
 			init_options = {
 				preferences = {
 					importModuleSpecifierPreference = "non-relative",
