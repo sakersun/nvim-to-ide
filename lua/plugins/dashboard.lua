@@ -3,7 +3,7 @@ return {
 	event = "VimEnter",
 	config = function()
 		require("dashboard").setup({
-			theme = "doom",
+			theme = "hyper",
 		})
 	end,
 	dependencies = { { "nvim-tree/nvim-web-devicons" } },

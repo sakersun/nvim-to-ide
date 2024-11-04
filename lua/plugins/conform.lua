@@ -7,25 +7,18 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				javascript = { "prettierd" },
-				javascriptreact = { "prettierd" },
 				typescript = { "prettierd" },
+				javascriptreact = { "prettierd" },
 				typescriptreact = { "prettierd" },
 				css = { "prettierd" },
 				sass = { "prettierd" },
-				json = { "prettierd" },
 				html = { "prettierd" },
+				json = { "prettierd" },
 				markdown = { "prettierd" },
 			},
 			format_on_save = {
 				timeout_ms = 500,
-				lsp_fallback = true,
-			},
-			formatters = {
-				prettierd = {
-					condition = function()
-						return vim.loop.fs_realpath(".prettierrc") ~= nil
-					end,
-				},
+				lsp_format = "fallback",
 			},
 		})
 	end,
