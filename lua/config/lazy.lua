@@ -24,11 +24,3 @@ require("lazy").setup({
 	},
 	checker = { enabled = true },
 })
-
-local function get_current_directory()
-	local current_directory = vim.fn.getcwd()
-
-	print("current directory" .. current_directory)
-end
-
-get_current_directory()
