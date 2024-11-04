@@ -17,10 +17,35 @@ return {
 			},
 			capabilities = capabilities,
 		})
-		lspconfig.tsserver.setup({
+		lspconfig.ts_ls.setup({
+			init_options = {
+				preferences = {
+					importModuleSpecifierPreference = "non-relative",
+				},
+			},
 			capabilities = capabilities,
 		})
 		lspconfig.pyright.setup({
+			settings = {
+				python = {
+					analysis = {
+						diagnosticMode = "workspace",
+						autoImportCompletions = true,
+						useLibraryCodeForTypes = true,
+						extraPaths = { "src", "tests" },
+						logLevel = "trace",
+					},
+				},
+			},
+			on_init = function(client)
+				client.config.settings.python.analysis.extraPaths = { "src", "tests" }
+			end,
+			capabilities = capabilities,
+		})
+		lspconfig.bashls.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.cssls.setup({
 			capabilities = capabilities,
 		})
 	end,

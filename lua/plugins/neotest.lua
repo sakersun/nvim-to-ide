@@ -11,13 +11,10 @@ return {
 		require("neotest").setup({
 			adapters = {
 				require("neotest-python")({
-					dap = { justMyCode = false },
-					args = { "--log-level", "DEBUG" },
 					runner = "pytest",
-					python = ".venv/bin/python",
-					pytest_discover_instances = true,
+					-- python = ".venv/bin/python",
+					args = { "--log-level", "DEBUG" },
 				}),
-				require("rustaceanvim.neotest"),
 			},
 		})
 	end,
