@@ -35,8 +35,11 @@ return {
 
 			local configurations = get_launch_configurations("launch.json")
 			dap.configurations.python = dap.configurations.python or {}
-			for _, config in ipairs(configurations) do
-				table.insert(dap.configurations.python, config)
+
+			if configurations and type(configurations) == "table" then
+				for _, config in ipairs(configurations) do
+					table.insert(dap.configurations.python, config)
+				end
 			end
 
 			dap.listeners.before.attach.dapui_config = function()
