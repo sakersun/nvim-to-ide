@@ -4,11 +4,26 @@ return {
 		config = function()
 			local dap = require("dap")
 			local dapui = require("dapui")
+
+			dap.adapters.python = {
+				type = "executable",
+				command = "python",
+				args = { "-m", "debugpy.adapter" },
+			}
 			dap.configurations.python = {
 				{
+					name = "Launch Aspen Server",
 					type = "python",
 					request = "launch",
-					name = "Launch file",
+					module = "uvicorn",
+					args = { "app:app", "--host", "127.0.0.1", "--port", "8000", "--reload", "--app-dir", "aspen/src" },
+					console = "integratedTerminal",
+					justMyCode = false,
+				},
+				{
+					name = "Launch Python File",
+					type = "python",
+					request = "launch",
 					program = "${file}",
 					pythonPath = function()
 						return "python"
@@ -28,6 +43,10 @@ return {
 			dap.listeners.before.event_exited.dapui_config = function()
 				dapui.close()
 			end
+			vim.fn.sign_define(
+				"DapBreakpoint",
+				{ text = "●", texthl = "DapBreakpointSymbol", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+			)
 		end,
 	},
 	{
