@@ -48,5 +48,7 @@ return {
 		lspconfig.cssls.setup({
 			capabilities = capabilities,
 		})
+
+		lspconfig.sourcekit.setup({})
 	end,
 }
