@@ -1,3 +1,16 @@
+local function get_python_path()
+	-- 获取当前工作目录
+	local cwd = vim.fn.getcwd()
+	-- 检查 venv/.venv 目录下的 Python 解释器
+	if vim.fn.executable(cwd .. "/venv/bin/python") == 1 then
+		return cwd .. "/venv/bin/python"
+	elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
+		return cwd .. "/.venv/bin/python"
+	else
+		return "/usr/bin/python" -- 默认使用系统 Python
+	end
+end
+
 local function get_launch_configurations(launch_file_name)
 	local path = require("plenary.path")
 
@@ -11,6 +24,9 @@ local function get_launch_configurations(launch_file_name)
 		if success then
 			local configurations = decoded_data.configurations
 			if configurations and type(configurations) == "table" then
+				for _, config in ipairs(configurations) do
+					config.pythonPath = get_python_path()
+				end
 				return configurations
 			end
 		else
@@ -70,13 +86,7 @@ return {
 	{
 		"mfussenegger/nvim-dap-python",
 		config = function()
-			require("dap-python").setup("python")
-		end,
-	},
-	{
-		"theHamsta/nvim-dap-virtual-text",
-		config = function()
-			require("nvim-dap-virtual-text").setup({})
+			require("dap-python").setup(get_python_path())
 		end,
 	},
 }
