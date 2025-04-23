@@ -9,7 +9,7 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
--- vim.cmd([[colorscheme catppuccin-macchiato]])
+vim.cmd([[colorscheme catppuccin-macchiato]])
 -- vim.cmd([[colorscheme tokyonight-storm]])
 -- vim.cmd([[colorscheme gruvbox]])
 
