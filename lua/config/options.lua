@@ -9,8 +9,8 @@ vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 
-vim.cmd([[colorscheme catppuccin-macchiato]])
--- vim.cmd([[colorscheme tokyonight-storm]])
+-- vim.cmd([[colorscheme catppuccin-macchiato]])
+vim.cmd([[colorscheme tokyonight-storm]])
 -- vim.cmd([[colorscheme gruvbox]])
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
-vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
+-- vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+-- vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+-- vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+-- vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
