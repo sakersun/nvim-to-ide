@@ -4,7 +4,7 @@ return {
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 		configs.setup({
-			ensure_installed = { "query", "c", "lua", "vim", "vimdoc", "regex" },
+			ensure_installed = { "query", "c", "lua", "vim", "vimdoc", "regex", "html", "javascript", "typescript" },
 			ignore_install = {},
 			sync_install = false,
 			modules = {},
@@ -16,6 +16,9 @@ return {
 				enabled = true,
 			},
 			fold = {
+				enabled = true,
+			},
+			autotag = {
 				enabled = true,
 			},
 		})
