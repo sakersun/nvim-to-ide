@@ -34,6 +34,16 @@ return {
 				},
 				capabilities = capabilities,
 			})
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.cssls.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.bashls.setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
 }

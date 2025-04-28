@@ -18,4 +18,20 @@ return {
 			desc = "Toggle Neo-tree (cmd)",
 		},
 	},
+	config = function()
+		require("neo-tree").setup({
+			filesystem = {
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = false,
+				},
+			},
+			buffers = {
+				follow_current_file = {
+					enabled = true,
+					leave_dirs_open = false,
+				},
+			},
+		})
+	end,
 }
