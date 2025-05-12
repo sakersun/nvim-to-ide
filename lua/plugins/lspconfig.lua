@@ -3,6 +3,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
+			local util = require("lspconfig.util")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			lspconfig.lua_ls.setup({
 				settings = {
@@ -32,6 +33,7 @@ return {
 						importModuleSpecifierPreference = "non-relative",
 					},
 				},
+				root_dir = util.root_pattern("tsconfig.json", "package.json", ".git"),
 				capabilities = capabilities,
 			})
 			lspconfig.pyright.setup({
