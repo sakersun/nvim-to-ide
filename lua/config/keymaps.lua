@@ -8,3 +8,18 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "LSP: Rename Symb
 
 -- for outline
 vim.keymap.set("n", "<leader>o", ":Outline<CR>", { noremap = true, silent = true })
+
+-- for bufferline
+vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "BufferLine: Next Buffer", silent = true })
+vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "BufferLine: Previous Buffer", silent = true })
+
+for i = 1, 9 do
+	vim.keymap.set(
+		"n",
+		"<leader>" .. i,
+		"<Cmd>BufferLineGoToBuffer " .. i .. "<CR>",
+		{ desc = "BufferLine: Go to Buffer", silent = true }
+	)
+end
+
+vim.keymap.set("n", "<leader>bd", "<Cmd>BufferLinePickClose<CR>", { desc = "BufferLine: CLose Buffer", silent = true })
