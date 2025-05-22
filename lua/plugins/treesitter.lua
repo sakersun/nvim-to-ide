@@ -10,9 +10,6 @@ return {
 			ignore_install = {},
 			auto_install = true,
 			modules = {},
-			highlight = {
-				enabled = true,
-			},
 			indent = {
 				enabled = true,
 			},
