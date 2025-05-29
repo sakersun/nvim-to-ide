@@ -23,3 +23,9 @@ for i = 1, 9 do
 end
 
 vim.keymap.set("n", "<leader>bd", "<Cmd>BufferLinePickClose<CR>", { desc = "BufferLine: CLose Buffer", silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>bo",
+	"<Cmd>BufferLineCloseOthers<CR>",
+	{ desc = "BufferLine: CLose Others", silent = true }
+)
