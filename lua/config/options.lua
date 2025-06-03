@@ -35,3 +35,9 @@ vim.diagnostic.config({
 })
 
 vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#BEBEBE", italic = true })
+
+vim.g.rustaceanvim = {
+	server = {
+		cmd = { "rust-analyzer" },
+	},
+}
