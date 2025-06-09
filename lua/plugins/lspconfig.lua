@@ -29,8 +29,13 @@ return {
 
 			lspconfig.ts_ls.setup({
 				init_options = {
+					singleInferredProject = true,
+					maxTsServerMemory = 4096,
 					preferences = {
 						importModuleSpecifierPreference = "non-relative",
+					},
+					flags = {
+						allow_incremental_sync = true,
 					},
 				},
 				root_dir = util.root_pattern("tsconfig.json", "package.json", ".git"),
