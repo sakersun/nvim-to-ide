@@ -2,10 +2,10 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
+			-- local lspconfig = require("lspconfig")
 			local util = require("lspconfig.util")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			lspconfig.lua_ls.setup({
+			vim.lsp.config.lua_ls = {
 				settings = {
 					Lua = {
 						runtime = {
@@ -25,9 +25,9 @@ return {
 					},
 				},
 				capabilities = capabilities,
-			})
+			}
 
-			lspconfig.ts_ls.setup({
+			vim.lsp.config.ts_ls = {
 				init_options = {
 					singleInferredProject = true,
 					maxTsServerMemory = 4096,
@@ -40,17 +40,17 @@ return {
 				},
 				root_dir = util.root_pattern("tsconfig.json", "package.json", ".git"),
 				capabilities = capabilities,
-			})
-			lspconfig.pyright.setup({
+			}
+			vim.lsp.config.pyright = {
 				capabilities = capabilities,
-			})
+			}
 
-			lspconfig.cssls.setup({
+			vim.lsp.config.cssls = {
 				capabilities = capabilities,
-			})
-			lspconfig.bashls.setup({
+			}
+			vim.lsp.config.bashls = {
 				capabilities = capabilities,
-			})
+			}
 		end,
 	},
 }
