@@ -12,3 +12,7 @@ require("config.lazy")
 require("config.config")
 
 vim.cmd.colorscheme("gruvbox")
+
+require("notify").setup({
+  background_colour = "#000000",
+})
