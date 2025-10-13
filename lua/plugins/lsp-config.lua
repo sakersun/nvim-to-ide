@@ -38,6 +38,9 @@ return {
       pyright = {
         settings = {},
       },
+      sourcekit = {
+        settings = {},
+      },
     }
 
     for name, opts in pairs(servers) do
