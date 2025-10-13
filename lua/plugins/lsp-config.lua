@@ -36,7 +36,9 @@ return {
         },
       },
       pyright = {
-        settings = {},
+        settings = {
+          python = {},
+        },
       },
       sourcekit = {
         settings = {},
