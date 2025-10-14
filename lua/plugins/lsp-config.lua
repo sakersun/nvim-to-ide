@@ -43,6 +43,9 @@ return {
       sourcekit = {
         settings = {},
       },
+      ts_ls = {
+        settings = {},
+      },
     }
 
     for name, opts in pairs(servers) do
