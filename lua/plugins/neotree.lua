@@ -14,6 +14,18 @@ return {
           enabled = true,
         },
       },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+        },
+      },
     })
+
+    vim.keymap.set(
+      "n",
+      "<leader>nt",
+      ":Neotree toggle<CR>",
+      { desc = "Neotree: Toggle File Explorer", silent = true }
+    )
   end,
 }
