@@ -6,6 +6,15 @@ return {
         lua = { "stylua" },
         python = { "isort", "black " },
         swift = { "swift_format" },
+        scss = { "prettier" },
+        css = { "prettier" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        javascriptreact = { "prettier" },
+        typescriptreact = { "prettier" },
+        html = { "prettier" },
+        json = { "prettier" },
+        markdown = { "prettier" },
       },
       formatters = {
         swift_format = {
