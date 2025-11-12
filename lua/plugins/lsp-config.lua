@@ -46,6 +46,9 @@ return {
       ts_ls = {
         settings = {},
       },
+      rust_analyzer = {
+        settings = {},
+      },
     }
 
     for name, opts in pairs(servers) do
