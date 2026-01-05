@@ -15,13 +15,7 @@ return {
           },
         },
         custom_filter = function(bufnr)
-          if vim.bo[bufnr].buflisted == false then
-            return false
-          end
-          if vim.api.nvim_buf_get_name(bufnr) == "" then
-            return false
-          end
-          return true
+          return vim.api.nvim_buf_get_name(bufnr) ~= ""
         end,
       },
     })
