@@ -15,6 +15,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         markdown = { "prettier" },
+        toml = { "taplo" },
       },
       formatters = {
         swift_format = {
