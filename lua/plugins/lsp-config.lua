@@ -49,6 +49,9 @@ return {
       rust_analyzer = {
         settings = {},
       },
+      cssls = {
+        settings = {},
+      },
     }
 
     for name, opts in pairs(servers) do
