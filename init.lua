@@ -16,3 +16,6 @@ vim.cmd.colorscheme("gruvbox")
 require("notify").setup({
   background_colour = "#000000",
 })
+
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number,line"
