@@ -1,6 +1,5 @@
 return {
   "neovim/nvim-lspconfig",
-  dependencies = { "saghen/blink.cmp" },
   config = function()
     local on_attach = function(_, bufnr)
       local map = function(keys, func, desc)
@@ -16,7 +15,7 @@ return {
     end
 
     local lspconfig = vim.lsp
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
+    local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local servers = {
       lua_ls = {
@@ -26,11 +25,7 @@ return {
             diagnostics = { globals = { "vim" } },
             workspace = {
               checkThirdParty = false,
-              library = {
-                vim.env.VIMRUNTIME,
-                "${3rd}/luv/library",
-                "${3rd}/busted/library",
-              },
+              library = vim.api.nvim_get_runtime_file("", true),
             },
           },
         },
