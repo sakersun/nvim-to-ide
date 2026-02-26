@@ -1,7 +1,14 @@
 return {
   "neovim/nvim-lspconfig",
   config = function()
-    local on_attach = function(_, bufnr)
+    local on_attach = function(client, bufnr)
+      if client.name == "ruff" then
+        -- 让 pyright 处理 hover
+        client.server_capabilities.hoverProvider = false
+        -- 让 conform 处理 format，禁用 ruff LSP 的 format
+        client.server_capabilities.documentFormattingProvider = false
+        client.server_capabilities.documentRangeFormattingProvider = false
+      end
       local map = function(keys, func, desc)
         vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc, silent = true })
       end
@@ -32,7 +39,23 @@ return {
       },
       pyright = {
         settings = {
-          python = {},
+          python = {
+            analysis = {
+              typeCheckingMode = "standard",
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+              diagnosticMode = "workspace",
+            },
+            pythonPath = ".venv/bin/python",
+          },
+        },
+      },
+      ruff = {
+        settings = {
+          organizeImports = true,
+          lint = {
+            run = "onSave",
+          },
         },
       },
       sourcekit = {

@@ -3,12 +3,6 @@ vim.diagnostic.config({
     prefix = "●",
     spacing = 2,
   },
-  signs = true,
-  underline = true,
-  severity_sort = true,
-})
-
-vim.diagnostic.config({
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "",
@@ -17,4 +11,7 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = "󰌵",
     },
   },
+  underline = true,
+  severity_sort = true,
 })
+

@@ -27,10 +27,18 @@ return {
           },
           stdin = false,
         },
+        ruff_format = {
+          command = "ruff",
+          prepend_args = { "format" },
+        },
+        ruff_organize_imports = {
+          command = "ruff",
+          prepend_args = { "check", "--select", "I", "--fix" },
+        },
       },
       format_on_save = {
-        timeout_ms = 1000,
-        lsp_fallback = true,
+        timeout_ms = 2000,
+        lsp_format = "fallback",
       },
     })
   end,
