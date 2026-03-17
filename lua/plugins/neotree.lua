@@ -13,8 +13,13 @@ return {
         follow_current_file = {
           enabled = true,
         },
+        hijack_netrw_behavior = "open_default",
+        use_libuv_file_watcher = true,
       },
       filesystem = {
+        follow_current_file = {
+          enabled = true,
+        },
         filtered_items = {
           hide_dotfiles = false,
           hide_by_name = {
