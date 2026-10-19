@@ -70,6 +70,11 @@ return {
       cssls = {
         settings = {},
       },
+      eslint = {
+        settings = {
+          workingDirectory = { mode = "auto" },
+        },
+      },
     }
 
     for name, opts in pairs(servers) do
